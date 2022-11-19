@@ -25,7 +25,5 @@ public class SaleService {
 		LocalDate min = minDate.equals("")? now.minusDays(365) : LocalDate.parse(minDate);
 		LocalDate max = maxDate.equals("")? now : LocalDate.parse(maxDate);
 		return repository.findSales(min, max, pageable);
-	}
-	
-	
+	}	
 }
